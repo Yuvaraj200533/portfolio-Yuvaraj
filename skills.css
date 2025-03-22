@@ -1,0 +1,116 @@
+body{
+    background: linear-gradient(to right,   rgb(82, 79, 79),rgb(17, 17, 17));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.a{
+    
+    color: steelblue;
+    margin-left: 10px;
+    overflow: visible;
+    text-shadow: 5px;
+    margin-left: 900px;
+}
+.M{
+    padding: 10px;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    }
+    
+    /* Skill Circle Design */
+    .skill-circle {
+    text-align: center;
+    position: relative;
+    }
+    
+    /* Outer Circle - Moving Line */
+    .outer-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#222 0deg, #222 360deg);
+    animation: rotateCircle 4s linear infinite; /* Rotating Effect */
+    }
+    
+    /* Rotating Glowing Border */
+    .outer-circle::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 60%);
+    box-shadow: 0 0 15px var(--color);
+    animation: glowRotate 2s ealinear forwards;
+    }
+    
+    /* Inner Circle with Percentage */
+    .inner-circle {
+    width: 100px;
+    height: 100px;
+    background: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    }
+    
+    /* Skill Title */
+    .skill-circle h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(17, 7, 7);
+    }
+    
+    /* Animated Progress Fill */
+    .skill-circle .outer-circle {
+    --progress: 0;
+    background: conic-gradient(var(--color) calc(var(--progress) * 3.6deg), #222 calc(var(--progress) * 3.6deg));
+    animation: progressFill 2s ease-in-out forwards;
+    }
+    
+    /* Circular Progress Animation */
+    @keyframes progressFill {
+    from {
+        --progress: 0;
+    }
+    to {
+        --progress: var(--percent);
+    }
+    }
+    
+    /* Rotating Glow Animation */
+    @keyframes glowRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+    
+    /* Moving Progress Line */
+    @keyframes rotateCircle {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+    
+    /* Different Colors & Percentage Values */
+    .skill-circle:nth-child(1) .outer-circle { --percent: 85; --color: #e7ff7e; } /* 85% */
+    .skill-circle:nth-child(2) .outer-circle { --percent: 80; --color: #121df7; } /* 80% */
+    .skill-circle:nth-child(3) .outer-circle { --percent: 75; --color: #7b00f7; } /* 75% */
+    .skill-circle:nth-child(4) .outer-circle { --percent: 70; --color: #e31d65; } /* 70% */
+    .skill-circle:nth-child(5) .outer-circle { --percent: 85; --color: #00a86b; } /* 85% (Communication) */
+    .skill-circle:nth-child(6) .outer-circle { --percent: 90; --color: #f70505; } /* 90% (Leadership) */
+    

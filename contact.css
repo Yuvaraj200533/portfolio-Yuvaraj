@@ -1,0 +1,46 @@
+body{
+    background: linear-gradient(to right,   rgb(82, 79, 79),rgb(17, 17, 17));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.a{
+    
+    color: steelblue;
+    margin-left: 10px;
+    overflow: visible;
+    text-shadow: 5px;
+    margin-left: 900px;
+    
+}
+.M{
+    padding: 10px;
+}
+.in{
+    display:inline-block ;
+    background-color: gray;
+    margin-top: -300px;
+    margin-left: 1000px;
+    animation: let-s 2s linear;
+}
+@keyframes let-s {
+    0%{
+        opacity: 0;transform: translateX(100px)
+    }
+    20%{
+         opacity: 1;
+    }
+    40%{
+        opacity: 0.1;
+    }
+    60%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0.1;
+
+    }
+    100%{
+        opacity: 1;
+    }    
+}

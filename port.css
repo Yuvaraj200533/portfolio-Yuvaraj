@@ -1,0 +1,39 @@
+body{
+    background: linear-gradient(to right,   rgb(82, 79, 79),rgb(17, 17, 17));
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    
+
+}
+.a{
+    
+    color: steelblue;
+    margin-left: 10px;
+    overflow: visible;
+    text-shadow: 5px;
+}           
+.b{
+    margin-top: 100px;
+    margin-right: 500px;  
+}
+
+.a b{    text-decoration: none;
+}
+.c{
+    margin-top: 100px;
+
+}
+img{
+    position: absolute;
+    left: 800px;
+    top: 150px;
+    border-radius:  50%;
+}
+.d{
+    position: absolute;
+    bottom: 10px;
+}
+nav{
+    text-decoration: none;
+}
